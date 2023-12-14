@@ -10,6 +10,7 @@ module.exports = {
         "Border": "#B8B8B8",
         "Error": "#F13637",
         "Warning": "#F3BB1B",
+        "Black": "#000000",
         "Success": "#3DC13C"
       },
       },
