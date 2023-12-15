@@ -797,6 +797,14 @@ video {
   height: 100vh;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -2472,6 +2480,14 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-80 {
+    height: 20rem;
+  }
+
+  .lg\:h-96 {
+    height: 24rem;
+  }
+
   .lg\:w-48 {
     width: 12rem;
   }
