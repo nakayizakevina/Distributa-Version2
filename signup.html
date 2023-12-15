@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Signup page</title>
     <link rel="stylesheet" href="./output.css">
 </head>
 <body class="w-screen h-screen bg-Grey2  flex flex-col justify-center items-center px-4">
-    <div class="w-full h-96 bg-White  flex flex-col justify-evenly px-4 ">
-        <h1 class="font-bold text-3xl text-Black">Login</h1>
+    <div class="w-full h-96 bg-White  flex flex-col justify-evenly px-4 lg:w-96">
+        <h1 class="font-bold text-3xl text-Black">Signup</h1>
         <div class="text-Black text-sm flex flex-col gap-2">
           <Label>Email</Label>
           <input class="w-full border border-Grey2 text-Black text-sm py-3 pl-2 outline-none" type="Email" placeholder="Email">
@@ -19,7 +19,11 @@
           <p class="font-semibold text-sm text-Black cursor-pointer">Forgot Password?</p>
         </div>
         <button class="w-full text-lg font-semibold text-White bg-Accent py-4 cursor-pointer">Login</button>
-        <p>Don't an account? <span class="underline cursor-pointer">Signup here</span> </p>
-      </div>
+        <p>Have an account? 
+            <a href="index.html">
+                <span class="underline cursor-pointer">Login here</span> 
+            </a>
+        </p>
+    </div>
 </body>
 </html>
