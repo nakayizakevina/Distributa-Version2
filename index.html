@@ -6,9 +6,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="./output.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline bg-blue-500">
-        Hello world!
-      </h1>
+<body class="w-screen h-screen bg-Border  flex flex-col justify-center items-center px-4">
+    <div class="w-full h-auto bg-White  flex flex-col gap-6 px-4 ">
+      <h1 class="font-bold text-2xl text-Black">Login</h1>
+      <div class="text-Black text-sm flex flex-col gap-2">
+        <Label>Email</Label>
+        <input class="w-full border border-Border text-Black text-sm py-3 pl-2 outline-none" type="Email" placeholder="Email">
+      </div>
+      <div class="text-Black text-sm flex flex-col gap-2">
+        <Label>Password</Label>
+        <input class="w-full border border-Border text-Black text-sm py-3 pl-2 outline-none" type="Password" placeholder="Password">
+        <p class="font-semibold text-sm text-Black cursor-pointer">Forgot Password?</p>
+      </div>
+      <button class="w-full text-lg font-semibold text-White bg-Accent py-4 cursor-pointer">Login</button>
+      <p>Don't an account? <span class="underline cursor-pointer">Signup here</span> </p>
+    </div>
+    
 </body>
 </html>
