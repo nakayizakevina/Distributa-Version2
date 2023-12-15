@@ -784,12 +784,32 @@ video {
   display: none;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
 .h-96 {
   height: 24rem;
 }
 
 .h-screen {
   height: 100vh;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-\[this-is\\\\\] {
@@ -1332,6 +1352,18 @@ video {
   gap: 0.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -1756,9 +1788,19 @@ video {
   border-style: none;
 }
 
+.border-Error {
+  --tw-border-opacity: 1;
+  border-color: rgb(241 54 55 / var(--tw-border-opacity));
+}
+
 .border-Grey2 {
   --tw-border-opacity: 1;
   border-color: rgb(184 184 184 / var(--tw-border-opacity));
+}
+
+.border-Success {
+  --tw-border-opacity: 1;
+  border-color: rgb(61 193 60 / var(--tw-border-opacity));
 }
 
 .bg-Accent {
@@ -1769,6 +1811,11 @@ video {
 .bg-Grey2 {
   --tw-bg-opacity: 1;
   background-color: rgb(184 184 184 / var(--tw-bg-opacity));
+}
+
+.bg-Success {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 193 60 / var(--tw-bg-opacity));
 }
 
 .bg-White {
@@ -1966,6 +2013,11 @@ video {
   vertical-align: super;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -2057,6 +2109,11 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.text-Accent {
+  --tw-text-opacity: 1;
+  color: rgb(13 110 253 / var(--tw-text-opacity));
+}
+
 .text-Black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -2090,6 +2147,10 @@ video {
 
 .no-underline {
   text-decoration-line: none;
+}
+
+.decoration-Black {
+  text-decoration-color: #000000;
 }
 
 .decoration-solid {
@@ -2458,10 +2519,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:h-96 {
-    height: 24rem;
-  }
-
   .lg\:w-96 {
     width: 24rem;
   }
