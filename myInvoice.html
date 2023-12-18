@@ -6,7 +6,7 @@
     <title>My Invoices Empty state</title>
     <link rel="stylesheet" href="./output.css">
 </head>
-<body class="w-screen h-screen bg-White border border-Success">
+<body class="w-screen h-screen bg-White border border-Success relative">
     <div class="w-full flex justify-between">
         <h1 class="text-2xl font-semibold text-Accent underline decoration-Black">Distributa</h1>
         <svg id="menu-icon" class="w-8 h-8 cursor-pointer"
@@ -24,7 +24,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
        </svg>
     </div>
-    <div id="menu-items"  class="hidden w-1/2 h-1/2 flex flex-col justify-evenly bg-Success">
+    <div id="menu-items"  class="hidden w-1/2 h-1/2 flex flex-col justify-evenly shadow-lg  bg-White  absolute right-0">
         <div class="w-full flex flex-col px-4  gap-6 ">
             <div class="flex gap-4">
                <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,7 +53,7 @@
                 <p class="text-lg text-Black">My Transactions</p>    
             </div>
         </div>
-        <div>
+        <div class="pl-2">
             <p>Log Out</p>
             <p>Settings</p>
         </div>
