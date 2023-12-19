@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body class="w-screen h-screen bg-White border border-Success relative flex flex-col lg:flex-row">
-    <div class="w-full h-fit flex justify-between border border-Success lg:w-64 lg:h-full lg:flex lg:flex-col">
+    <div class="w-full h-fit flex justify-between border border-Success lg:w-fit lg:h-full lg:flex lg:flex-col">
         <h1 class="text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand">Distributa</h1>
         <h1 class="hidden text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand2">Db</h1>
         
@@ -24,7 +24,7 @@
                     <p class="text-lg text-Black menu-text" >My Invoices</p>
                 </div>
                 
-                <div class="flex gap-4 border border-White"> 
+                <div class="flex gap-4"> 
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,7 +32,7 @@
                     </svg>
                     <p class="text-lg text-Black menu-text" >New Invoices</p>   
                 </div>
-                <div class="flex gap-4 border border-White">
+                <div class="flex gap-4">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -123,27 +123,27 @@
     })
 
     
-    const navBrand = document.getElementById("nav-brand");
+    const menuTexts = document.querySelectorAll(".menu-text")
+  const navBrand = document.getElementById("nav-brand");
   const navBrand2 = document.getElementById("nav-brand2");
   navBrand.addEventListener("click", function(){
   navBrand2.classList.toggle("hidden");
   navBrand.classList.toggle("hidden");
+
+    for( let index = 0; index < menuTexts.length; index++) {
+        const menuText= menuTexts[index]
+        menuText.classList.toggle("hidden");
+      }
   });
 
-    const NavBrand = document.getElementById("nav-brand");
-  const NavBrand2 = document.getElementById("nav-brand2");
-  NavBrand2.addEventListener("click", function(){
-  NavBrand.classList.toggle("hidden");
-  NavBrand2.classList.toggle("hidden");
-  }); 
-
-  const brand = document.getElementById("nav-brand");
-  brand.addEventListener("click", function(){         
-    const menuTexts = document.querySelectorAll(".menu-text")
-        for( let index = 0; index < menuTexts.length; index++) {
+  navBrand2.addEventListener("click", function(){
+  navBrand.classList.toggle("hidden");
+  navBrand2.classList.toggle("hidden");
+  
+  for( let index = 0; index < menuTexts.length; index++) {
         const menuText= menuTexts[index]
-   
-       menuText.classList.toggle("hidden")
-      }});
+        menuText.classList.toggle("hidden");
+      }
+  });
 </script>
 </html>
