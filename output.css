@@ -653,6 +653,14 @@ video {
   top: 2.5rem;
 }
 
+.right-5 {
+  right: 1.25rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -792,6 +800,10 @@ video {
   display: none;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -815,6 +827,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-48 {
@@ -2596,10 +2612,6 @@ video {
     height: 100%;
   }
 
-  .lg\:w-1\/2 {
-    width: 50%;
-  }
-
   .lg\:w-96 {
     width: 24rem;
   }
@@ -2615,6 +2627,12 @@ video {
 
   .lg\:flex-col {
     flex-direction: column;
+  }
+
+  .lg\:shadow-none {
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
