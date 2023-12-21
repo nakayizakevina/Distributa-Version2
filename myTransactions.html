@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
-    <div id="mainContainer" class="w-screen h-screen border border-Error relative"></div>
+    <div id="mainContainer" class="w-screen h-screen border border-Error relative lg:flex lg:gap-2"></div>
 </body>
 <script>
     const sideBar = document.createElement("div")
-    sideBar.className = "w-full h-fit flex justify-between lg:w-fit lg:h-full lg:flex lg:flex-col"
+    sideBar.className = "w-full h-fit flex justify-between lg:w-fit lg:h-full lg:flex lg:flex-col border border-Success"
     const head1 = document.createElement("h1")
     head1.className = "text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer"
     head1.innerText = "Distributa" 
     head1.addEventListener("click",function(){
       shorthead.classList.toggle("hidden")  
       head1.classList.toggle("hidden")
+    
     })
 
     const shorthead = document.createElement("h1")
@@ -59,7 +60,7 @@
     })
 
  const itemsContainer  = document.createElement("div")
- itemsContainer.className = "hidden w-fit h-[90%] flex-col justify-between shadow-lg py-5 mt-2 lg:flex lg:shadow-none"
+ itemsContainer.className = "hidden w-fit h-[90%] flex-col justify-between shadow-lg py-5 mt-2 lg:flex lg:shadow-none border border-Accent"
  const items = document.createElement("div")
  items.className = "w-full flex flex-col p-10 gap-6"
  const myInvoices = document.createElement("div")
@@ -113,7 +114,14 @@ invoiceText.innerText = "My Invoices"
   Settings.className = "text-lg text-Black"
   Settings.innerText = "Settings"
 
+const content = document.createElement("div")
+content.className = "w-full h-full flex flex-col gap-4 border border-Accent"
+const heading = document.createElement("h1")
+heading.className = "text-lg text-Black semi-bold"
+heading.innerText = "My Transactions"
 
+const midContent = document.createElement("div")
+midContent.className = "w-full h-full flex flex-col gap-2 l"
  
 
 mainContainer.appendChild(sideBar)
@@ -135,5 +143,8 @@ mainContainer.appendChild(sideBar)
   itemsContainer.appendChild(sidebarFooter)
   sidebarFooter.appendChild(logOut)
   sidebarFooter.appendChild(Settings)
+  mainContainer.appendChild(content)
+  content.appendChild(heading)
+  content.appendChild(midContent)
 </script>
 </html>
