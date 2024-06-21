@@ -6,33 +6,33 @@
     <title>My Invoices Empty state</title>
     <link rel="stylesheet" href="./output.css">
 </head>
-<body class="w-screen h-screen bg-White border border-Success relative flex flex-col lg:flex-row">
-    <div class="w-full h-fit flex justify-between border border-Success lg:w-fit lg:h-full lg:flex lg:flex-col">
-        <h1 class="text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand">Distributa</h1>
+<body class="w-screen h-screen bg-White  relative flex flex-col lg:flex-row">
+    <div class="w-full h-fit flex justify-between  lg:w-[15%] lg:h-full lg:flex lg:flex-col">
+        <h1 class="text-2xl p-5 font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand">Distributa</h1>
         <h1 class="hidden text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand2">Db</h1>
         
-        <div class="hidden w-fit h-[90%] flex-col justify-between shadow-lg bg-Success py-5 mt-2 lg:flex">
-            <div class="w-full flex flex-col p-10 gap-6 ">
-                <div class="flex gap-4">
-                   <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="hidden  h-[90%] flex-col justify-between  py-5 mt-2 lg:flex">
+            <div class="w-full flex flex-col p-8 gap-6">
+                <div class="flex gap-4 items-center">
+                   <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <p class="text-lg text-Black menu-text" >My Invoices</p>
+                    <p class="text-lg text-Black menu-text">My Invoices</p>
                 </div>
                 
-                <div class="flex gap-4"> 
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="flex gap-4  items-center w-full"> 
+                     <svg width="24"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M8 12H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <p class="text-lg text-Black menu-text" >New Invoices</p>   
+                    </svg> 
+                    <p class="text-lg text-Black menu-text">New Invoices</p>   
                 </div>
-                <div class="flex gap-4">
+                <div class="flex gap-4 items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="p-5">
-                <p>Log Out</p>
+              <a href="./index.html"><p>Log Out</p></a>  
                 <p>Settings</p>
             </div>
         </div>
@@ -61,6 +61,7 @@
        </svg>
      
     </div>
+    <!-- smaller screens  -->
     <div id="menu-items"  class="hidden w-fit h-[90%] flex-col justify-between shadow-lg  bg-White  absolute right-0 top-10 py-5 lg:hidden">
         <div class="w-full flex flex-col p-10 gap-6 ">
             <div class="flex gap-4">
@@ -91,17 +92,17 @@
             </div>
         </div>
         <div class="p-5">
-            <p>Log Out</p>
+            <a href="./index.html"><p>Log Out</p></a>
             <p>Settings</p>
         </div>
     </div>
    
-    <div class="w-full h-full flex flex-col gap-3  border border-Accent">
-        <h1 class="text-3xl font-semibold text-Black">My Invoices</h1>
+    <div class="w-full h-full flex flex-col gap-3 ">
+        <h1 class="text-3xl mt-5 font-semibold text-Black">My Invoices</h1>
         <div class="w-full flex justify-end">
-            <button class="w-48 bg-Accent text-White py-3 text-lg font-semibold">Create New Invoices</button>   
+            <button class="w-48 bg-Accent text-White py-3 mr-5 text-lg ">Create New Invoices</button>   
         </div>
-        <div id="container" class="w-full h-full border border-Error overflow-y-auto">
+        <div id="container" class="w-full h-full overflow-y-auto">
             
         </div>
 
