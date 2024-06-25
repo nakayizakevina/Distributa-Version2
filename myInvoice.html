@@ -70,15 +70,14 @@
         </div>
       </fieldset>
       <h2 class="text-lg font-semibold">Generate A Shareable Invoice</h2>
-      <div class="w-screen border border-red-600">
-        <div class="w-full">
-            <div class="w-full">
-                <label for="Source">Payment Source/Purpose</label>
-                <input class="w-1/2 border border-black" type="text" name="Source" id="Source" placeholder="Payment Source/Purpose">
-                <label for="Amount">Amount</label>
-                <input   type="text" name="Amount" id="Amount" placeholder="Amount">
+      <div class="w-screen h-fit">
+        <div class="w-full h-fit my-2">
+            <div class="w-full grid grid-cols-2 gap-x-2 border border-green-600">
+                <label for="Source" class="block">Payment Source<input class="w-full h-10 border border-black block text-sm" type="text" name="Source" id="Source" placeholder="Payment Source/Purpose"></label>
+                <label for="Amount" class="block">Amount<input class="w-full h-10 border border-black block text-sm"   type="text" name="Amount" id="Amount" placeholder="Amount"></label>
+                
             </div>
-            <button>Enter</button>
+            <button class="w-full h-10 bg-gray-200 text-blue-600 font-semibold">Enter</button>
            
         </div>
 
