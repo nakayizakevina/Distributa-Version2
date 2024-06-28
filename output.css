@@ -891,6 +891,10 @@ video {
   width: 100vw;
 }
 
+.w-10 {
+  width: 2.5rem;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1888,6 +1892,11 @@ video {
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 
+.border-red-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
 .bg-Accent {
   --tw-bg-opacity: 1;
   background-color: rgb(13 110 253 / var(--tw-bg-opacity));
@@ -2785,6 +2794,10 @@ video {
 
   .lg\:flex-col {
     flex-direction: column;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:justify-between {
