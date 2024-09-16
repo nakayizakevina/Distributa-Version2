@@ -2843,6 +2843,10 @@ video {
     gap: 1.5rem;
   }
 
+  .lg\:p-2 {
+    padding: 0.5rem;
+  }
+
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
