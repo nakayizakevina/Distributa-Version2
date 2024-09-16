@@ -70,8 +70,8 @@
         </div>
       </fieldset>
       <h2 class="text-lg font-semibold">Generate A Shareable Invoice</h2>
-      <div class="lg:flex lg:flex-row lg:gap-2 border border-red-500">
-         <div class="sm:w-full h-fit lg:h-full border border-green-600">
+      <div class="lg:flex lg:flex-row lg:gap-2  border border-red-500">
+         <div class="sm:w-full h-fit lg:h-full flex flex-col gap-2  lg:gap-6 border border-green-600">
             <div class="lg:w-full lg:flex lg:flex-row lg:justify-between">
                 <div class="w-full grid grid-cols-2 gap-x-2 lg:w-1/2">
                     <label for="Source" class="block">Payment Source<input class="w-full h-10 border border-black block text-xs pl-2 " type="text" name="Source" id="Source" placeholder="Payment Source/Purpose"></label>
@@ -83,7 +83,7 @@
             
 
             <h2>Add Beneficiaries</h2>
-            <section class="w-full border border-blue-500 ">
+            <section class="w-full flex flex-col gap-2 lg:gap-6 border border-blue-500 ">
              <table class="w-full">
                 <tr class="p-2">
                     <td class="text-xs px-2">Name</td>
@@ -131,7 +131,7 @@
                 </select>
                 <button class="w-32 h-10  text-blue-600 bg-gray-200 lg:w-full">Save</button>
             </div>
-           
+            <button class="w-32  p-2 text-sm bg-gray-200 text-blue-600 font-semibold ">Add A Beneficiary</button>
             </section>
           
          </div>
