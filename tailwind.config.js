@@ -13,6 +13,16 @@ module.exports = {
         "Black": "#000000",
         "Success": "#3DC13C"
       },
+
+      fontFamily: {
+        archivo: ['Archivo', 'sans-serif'], 
+        satoshi: ['Satoshi'],
+                                                
+                                                
+      },
+
+    
+      
       },
     },
   }
