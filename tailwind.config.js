@@ -16,7 +16,7 @@ module.exports = {
 
       fontFamily: {
         archivo: ['Archivo', 'sans-serif'], 
-        satoshi: ['Satoshi'],
+        satoshi: ['Satoshi','sans-serif'],
                                                 
                                                 
       },
