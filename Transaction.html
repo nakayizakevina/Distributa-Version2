@@ -7,7 +7,125 @@
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
-    <main class="m-3 md:flex md:gap-12">
+   <div class="h-screen   bg-Black bg-opacity-90 hidden absolute z-30" id="details">
+      <section  class="bg-White w-full md:w-1/3 ">
+         <div class="flex justify-between p-4 bg-Grey">
+             <p>Transaction Details</p>
+             <figure id="close" class="cursor-pointer">
+               <img src="./Img/x-circle.png" alt="">
+             </figure>
+         </div>
+         <div class="p-4 flex flex-col gap-3">
+            <p>March 16</p>
+            <div class="flex flex-row justify-between">
+               <p>Rent Income</p>
+               <p>+500</p>
+            </div>
+            <p> 
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+               Numquam adipisci beatae fuga iusto eveniet provident repellat 
+               earum tempora sunt, animi optio, atque hic vero vel. Corporis 
+               sunt dolorem velit ipsa.
+            </p>
+            <div class="flex flex-row justify-between border-b">
+               <p>Income/Expense</p>
+               <p class="underline">Placeholder</p>
+            </div>
+            <div class="flex flex-row justify-between border-b">
+               <p>Category</p>
+               <p class="underline">Placeholder</p>
+            </div>
+            <div class="flex flex-row justify-between border-b">
+               <p>Receipt</p>
+               <p class="underline">Placeholder</p>
+            </div>
+            <div class="flex flex-row justify-between border-b">
+               <p>Method</p>
+               <p class="underline">Placeholder</p>
+            </div>
+            <div class="flex flex-row justify-between border-b">
+               <p>Payee</p>
+               <p class="underline">Placeholder</p>
+            </div>
+   
+         </div>
+           
+       </section> 
+   </div> 
+   <div class="h-screen  bg-Black bg-opacity-90  hidden  absolute  z-30" id="newTransaction">
+      <section  class="bg-White w-full md:w-1/3 ">
+         <div class="flex justify-between p-4 bg-Grey">
+             <p>Add New Transaction</p>
+             <figure id="exist" class="cursor-pointer">
+               <img src="./Img/x-circle.png" alt="" class="w-6 h-6">
+             </figure>
+         </div>
+        
+         <div class="p-4 flex flex-col gap-3">
+            <div class="flex flex-row gap-4">
+               <button class="bg-Grey border border-none w-1/2 p-4">Expense</button>
+               <button class="bg-Grey border border-Black w-1/2 p-4">Income</button>
+            </div>
+             <div class="w-full flex flex-row gap-3">
+                <div class="w-full flex flex-col gap-1">
+                  <label for="">Date</label>
+                  <input type="date" placeholder="DD/MM/YY" class="border border-Grey2 p-5">
+                </div>
+                <div class="flex flex-col gap-1">
+                  <label for="">Item</label>
+                  <input type="text" placeholder="Item"  class="border border-Grey2 p-5 text-Black">
+                </div>
+             </div>
+             <div class="flex flex-col gap-1">
+               <label for="">Amount</label>
+               <input type="text" placeholder="Payee"  class="border border-Grey2 p-5 text-Black">
+             </div>
+             <div class="flex flex-col gap-1">
+               <label for="">Description</label>
+               <textarea name="" id="" placeholder="Description" class="border border-Grey2 p-5 text-Black"></textarea>
+               
+             </div>
+             <div class="w-full flex flex-row gap-3">
+               <div class="w-full flex flex-col gap-1">
+                 <label for="">Payee</label>
+                 <input type="text" placeholder="Payee" class="border border-Grey2 p-5 text-Black">
+               </div>
+               <div class="w-full flex flex-col gap-1">
+                 <label for="">Receipt/Voucher #</label>
+                 <input type="text" placeholder="00007" class="border border-Grey2 p-5 text-Black">
+               </div>
+            </div>
+            <div class="w-full flex flex-row gap-3">
+               <div class="w-full flex flex-col gap-1">
+                 <label for="">Payment Method</label>
+                 <select name="" id="" class="border border-Grey2 p-5 text-Black">
+                  <option value="">Payee</option>
+                  <option value="">Cash</option>
+                  <option value="">Check</option>
+                 </select>
+               </div>
+               <div class="w-full flex flex-col gap-1">
+                  <label for="">Category</label>
+                  <select name="" id="" class="border border-Grey2 p-5 text-Black">
+                   <option value="">Select one</option>
+                   <option value="">Cash</option>
+                   <option value="">Check</option>
+                  </select>
+                </div>
+
+            </div>
+
+            <button class="text-white bg-Accent p-4 text-2xl ">Add</button>
+               
+            
+           
+   
+         </div>
+           
+       </section> 
+   </div> 
+   
+   <main class="m-3  relative md:flex md:gap-12 ">
         <nav class="flex justify-between md:hidden">
             <img src="./Img/mobile.svg" alt="">
             <img src="./Img/menu.png" alt="">
@@ -130,6 +248,8 @@
 
        <section class="flex flex-col gap-4 md:w-full ">
           <h1 class="text-2xl font-archivo  md:text-4xl">My Transactions</h1>
+
+        
           <div class="flex flex-col gap-4 md:w-full md:flex md:flex-row-reverse">
             <section class="flex flex-col gap-2 md:w-1/2">
                 <div class="flex gap-2">
@@ -143,10 +263,14 @@
                     </div>
                 </div>
                  <button class="bg-Grey text-Accent p-2">Export PDF Report</button>
-                 <button class="bg-Accent text-white p-2">Add New</button>
+                 <button class="bg-Accent text-white p-2" id="addNew">Add New</button>
+
+                 
              </section>
              <section class="flex flex-col gap-4 md:w-full">
-                <section class="bg-Grey p-2 flex flex-col gap-10 rounded-md">
+
+              
+                <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md ">
                     <div class="flex justify-between">
                         <p>March 16</p>
                         <p>+1250</p>
@@ -154,28 +278,28 @@
                     </div>
                        <div class="flex justify-between border-b">
                           <p>Rent Income</p>
-                          <div class="flex gap-3">
+                          <div class="flex gap-3 md:gap-5">
                              <p>+500</p>
-                             <p class="underline">See Details</p>
+                             <p class="underline cursor-pointer" id="view" >See Details</p>
                           </div>
                           
                        </div>
                        <div class="flex justify-between border-b">
                            <p>Mobile Topup</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>-700</p>
                               <p class="underline">See Details</p>
                            </div>
                         </div>
                         <div class="flex justify-between border-b">
                            <p>Client Payment</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>+1450</p>
                               <p class="underline">See Details</p>
                            </div>
                         </div>
                 </section>
-                <section class="bg-Grey p-2 flex flex-col gap-10 rounded-md">
+                <section class="bg-Grey p-6  flex flex-col gap-10 rounded-md">
                     <div class="flex justify-between">
                         <p>March 16</p>
                         <p>+1250</p>
@@ -183,7 +307,7 @@
                     </div>
                        <div class="flex justify-between border-b">
                           <p>Rent Income</p>
-                          <div class="flex gap-3">
+                          <div class="flex gap-3 md:gap-5">
                              <p>+500</p>
                              <p class="underline">See Details</p>
                           </div>
@@ -191,20 +315,20 @@
                        </div>
                        <div class="flex justify-between border-b">
                            <p>Mobile Topup</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>-700</p>
                               <p class="underline">See Details</p>
                            </div>
                         </div>
                         <div class="flex justify-between border-b">
                            <p>Client Payment</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>+1450</p>
                               <p class="underline">See Details</p>
                            </div>
                         </div>
                 </section>
-                <section class="bg-Grey p-2 flex flex-col gap-10 rounded-md">
+                <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md">
                     <div class="flex justify-between">
                         <p>March 16</p>
                         <p>+1250</p>
@@ -212,7 +336,7 @@
                     </div>
                        <div class="flex justify-between border-b">
                           <p>Rent Income</p>
-                          <div class="flex gap-3">
+                          <div class="flex gap-3 md:gap-5">
                              <p>+500</p>
                              <p class="underline">See Details</p>
                           </div>
@@ -220,14 +344,14 @@
                        </div>
                        <div class="flex justify-between border-b">
                            <p>Mobile Topup</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>-700</p>
                               <p class="underline">See Details</p>
                            </div>
                         </div>
                         <div class="flex justify-between border-b">
                            <p>Client Payment</p>
-                           <div class="flex gap-3">
+                           <div class="flex gap-3 md:gap-5">
                               <p>+1450</p>
                               <p class="underline">See Details</p>
                            </div>
@@ -238,11 +362,51 @@
           
              </section>
 
-          </div>
+          </div>  
         
        </section>
 
 
-    </main>
+      
+
+
+    </main>   
+    <script>
+    
+
+
+      const view = document.getElementById("view");
+      const details = document.getElementById("details");
+     
+  
+      view.addEventListener("click",function(){
+         details.classList.toggle("hidden");
+         details.classList.add("flex","justify-center","items-center")
+      });
+
+
+     const close = document.getElementById("close");
+     close.addEventListener("click",function(){
+        details.classList.add("hidden")
+     });
+
+      const addNew = document.getElementById("addNew");
+      const newTransaction = document.getElementById("newTransaction");
+      addNew.addEventListener("click",function(){
+      newTransaction.classList.toggle("hidden");  
+      newTransaction.classList.add("flex","justify-center","items-center");
+        
+    });
+     
+   const exist = document.getElementById("exist")
+   exist.addEventListener("click", function(){
+    newTransaction.classList.add("hidden");
+   });
+     
+
+     
+   </script>
+    
 </body>
+
 </html>
