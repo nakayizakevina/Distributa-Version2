@@ -1,454 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NewInvoice</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300&display=swap">
-  </head>
-  <body>
-    <main class=" h-screen bg-White relative flex flex-col mx-4 lg:flex-row lg:gap-10">
-      <aside class="h-full flex flex-row justify-between lg:flex-col">
-      
-        <h1
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NewInvoice</title>
+  <link rel="stylesheet" href="./output.css" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@300&display=swap">
+</head>
+
+<body>
+  <main class=" h-screen bg-White relative flex flex-col mx-4 lg:flex-row lg:gap-10">
+    <div id="colasp" class="hidden w-24 h-full">
+      <div class="w-full h-1/2 gap-10 px-4 flex flex-col">
+        <img id="db" class="w-12 h-12 cursor-pointer" src="./Img/db.svg" alt="">
+        <a href="./MyInvoice2.html">
+          <img class="w-8 h-8" src="././Img/clipboard.svg" alt="">
+        </a>
+        <a href="./myInvoiceE.html">
+          <img class="w-8 h-8" src="./Img/file-text 1.png" alt="">
+        </a>
+        <a href="./Transaction.html">
+          <img class="w-8 h-8" src="./Img/book.png" alt="">
+        </a>
+
+
+      </div>
+      <div class="p-5 cursor-pointer  hover:bg-Grey  rounded-md">
+        <a href="./index.html">
+          <p>Log Out</p>
+        </a>
+        <p>Settings</p>
+      </div>
+
+    </div>
+
+    <aside id="aside" class="h-full  flex flex-row justify-between lg:flex-col">
+
+      <h1
         class="text-2xl p-5 font-semibold text-Accent underline decoration-Black cursor-pointer md:hidden md:no-underline md:no-decoration"
-        id="nav-brand"
-      >
+        id="nav-brand">
         Distributa
       </h1>
-        
-        <svg
-          id="menu-icon"
-          class="w-8 h-8 cursor-pointer mt-5 mr-2 lg:hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2.5"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
-        <svg
-          id="exit"
-          class="hidden w-8 h-8"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-        <div
-          id="menu-items"
-          class="hidden w-fit h-full flex-col justify-between shadow-lg bg-White absolute right-0 top-10 py-5   lg:flex lg:static lg:shadow-none lg:py-0"
-        >
-          <div class="w-full flex flex-col gap-6">
-            <h1
-            class="hidden text-2xl p-5 font-semibold text-Accent font-satoshi underline decoration-Black cursor-pointer md:flex md:no-underline md:no-decoration"
-          >
+
+      <svg id="menu-icon" class="w-8 h-8 cursor-pointer mt-5 mr-2 lg:hidden" xmlns="http://www.w3.org/2000/svg"
+        fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <svg id="exit" class="hidden w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <div id="menu-items"
+        class="hidden w-fit h-full flex-col justify-between shadow-lg bg-White absolute right-0 top-10 py-5  lg:w-48   lg:flex lg:static lg:shadow-none lg:py-0">
+        <div class="w-full flex flex-col gap-6">
+          <h1 id="distributa"
+            class="hidden text-2xl p-5 font-semibold text-Accent font-satoshi underline decoration-Black cursor-pointer md:flex md:no-underline md:no-decoration">
             Distributa
           </h1>
-            <div class="flex gap-4">
-              <svg
-                class=""
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+          <a href="./MyInvoice2.html">
+            <div class="flex gap-4 items-center cursor-pointer p-2 hover:bg-Grey rounded-md">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M14 2V8H20"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16 13H8"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16 17H8"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M10 9H9H8"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <p class="text-lg text-Black">My Invoices</p>
+              <p class="text-lg text-Black menu-text">My Invoices</p>
             </div>
 
-            <div class="flex gap-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+          </a>
+          <a href="./myInvoiceE.html">
+            <div class="flex gap-4  items-center w-full cursor-pointer p-2 hover:bg-Grey rounded-md">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12 8V16"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M8 12H16"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M8 12H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <p class="text-lg text-Black">New Invoices</p>
+              <p class="text-lg text-Black menu-text">New Invoices</p>
             </div>
-            <div class="w-full flex gap-4">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+          </a>
+          <a href="./Transaction.html">
+            <div class="flex gap-4 items-center cursor-pointer p-2 hover:bg-Grey rounded-md">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                 <path
                   d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z"
-                  stroke="black"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-              <p class="text-lg text-Black">My Transactions</p>
+              <p class="text-lg text-Black menu-text">My Transactions</p>
             </div>
-          </div>
-          <div class="p-5">
-            <a href="./index.html"><p>Log Out</p></a>
-            <p>Settings</p>
-          </div>
+          </a>
         </div>
-      </aside>
-      <section class="w-full h-full flex flex-col gap-4 lg:w-80% lg:gap-10">
-        <h1 class="font-semibold text-3xl ">New Invoice</h1>
-        <div class="w-full bg-Grey gap-7 rounded-sm lg:flex lg:flex-col lg:p-4 lg:relative lg:h-28">
-            <div class="flex flex-row gap-4 p-4 lg:p-0">
-              <div class="w-28">
-                 <label
-                for="logo"
-                class="border border-gray h-24 w-24 flex justify-center items-center cursor-pointer bg-white lg:absolute lg:z-20 lg:h-28 lg:-top-4"
-              >
-                <input type="file" id="logo" name="logo" class="hidden" />
-                <span class="text-xs text-center"
-                  >Add your <br />
-                  logo
-                </span>
-              </label> 
+        <div class="p-5 cursor-pointer  hover:bg-Grey  rounded-md">
+          <a href="./index.html">
+            <p>Log Out</p>
+          </a>
+          <p>Settings</p>
+        </div>
+      </div>
+    </aside>
+    <section class="w-full h-full flex flex-1 flex-col gap-4 lg:w-80% lg:gap-10">
+      <h1 class="font-semibold text-3xl ">New Invoice</h1>
+      <div class="w-full bg-Grey gap-7 rounded-sm lg:flex lg:flex-col lg:p-4 lg:relative lg:h-28">
+        <div class="flex flex-row gap-4 p-4 lg:p-0">
+          <div class="w-28">
+            <label for="logo"
+              class="border border-gray h-24 w-24 flex justify-center items-center cursor-pointer bg-white lg:absolute lg:z-20 lg:h-28 lg:-top-4">
+              <input type="file" id="logo" name="logo" class="hidden" />
+              <span class="text-xs text-center">Add your <br />
+                logo
+              </span>
+            </label>
 
+          </div>
+          <section class="w-full lg:flex lg:flex-row lg:justify-between">
+            <div class="flex flex-col gap-3  w-full lg:flex-row lg:w-auto">
+              <div class="flex flex-col gap-1">
+                <label for="">Paper Size</label>
+                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                  <option value="">Select one</option>
+                  <option value="">A2</option>
+                  <option value="">A3</option>
+                  <option value="">A4</option>
+                </select>
               </div>
-              <section class="w-full lg:flex lg:flex-row lg:justify-between">
-                    <div class="flex flex-col gap-3  w-full lg:flex-row lg:w-auto">
-                        <div class="flex flex-col gap-1">
-                            <label for="">Paper Size</label>
-                            <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
-                                <option value="">Select one</option>
-                                <option value="">A2</option>
-                                <option value="">A3</option>
-                                <option value="">A4</option>
-                            </select>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <label for="">Orientation</label>
-                            <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
-                                <option value="">Select one</option>
-                                <option value="">Portrait</option>
-                                <option value="">Landscape</option>
-                                
-                            </select>
-                        </div>
-                        <div class="flex flex-col gap-1">
-                            <label for="">Currency</label>
-                            <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
-                                <option value="">Select one</option>
-                                <option value="">A1</option>
-                                <option value="">A2</option>
-                                <option value="">A3</option>
-                                <option value="">A4</option>
-                            </select>
-                        </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Orientation</label>
+                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                  <option value="">Select one</option>
+                  <option value="">Portrait</option>
+                  <option value="">Landscape</option>
 
-                    </div>
-                    
-                    <button class="hidden lg:flex bg-Grey2 items-center text-white p-4 h-12 my-5">Download PDF</button>
-                   
-                </section>
+                </select>
+              </div>
+              <div class="flex flex-col gap-1">
+                <label for="">Currency</label>
+                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                  <option value="">Select one</option>
+                  <option value="">A1</option>
+                  <option value="">A2</option>
+                  <option value="">A3</option>
+                  <option value="">A4</option>
+                </select>
+              </div>
 
             </div>
 
-           
-         
+            <button class="hidden lg:flex bg-Grey2 items-center text-white p-4 h-12 my-5">Download PDF</button>
+
+          </section>
+
         </div>
-        <section class="md:flex md:flex-row md:gap-3 lg:overflow-y-auto">
-           
-          <div class="flex flex-col gap-3 md:gap-8">
-            <section class="w-full">
-              <div class="w-full bg-Grey rounded-sm flex flex-col gap-3 lg:flex-row">
-                <form action="" class="w-full flex flex-col gap-2 p-4 lg:w-1/2">
-                  <strong>Billed From</strong>
-                  <div class="w-full flex gap-2 ">
-                    <input type="text" placeholder="Name" class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
-                    <input type="text" placeholder="Email" class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
-                  </div>
-    
-                  <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
-                
-                </form>
-    
-                <form action="" class="flex flex-col gap-2 p-4 lg:w-1/2">
-                  <strong>Billed To</strong>
-                  <div class="w-full flex gap-2">
-                    <input type="text" placeholder="Name" class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
-                    <input type="text" placeholder="Email" class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
-                  </div>
-                  <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
-                
-                </form>
-              </div>
-            </section>
-            <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4 md:hidden">
-              <label for="">Title</label>
-              <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Invoice #</label>
-              <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Issue Date</label>
-              <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Due Date</label>
-              <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-            </section>
-    
-            <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
-              <div class="overflow-x-auto flex flex-col gap-2">
-                <table class="w-full">
-                  <thead>
-                    <tr>
-                      <th class="px-10 py-2 text-left">Title</th>
-                      <th class="px-10 py-2 text-left">Quantity</th>
-                      <th class="px-10 py-2 text-left">Units</th>
-                      <th class="px-10 py-2 text-left">Price/Unit</th>
-                      <th class="px-10 py-2"></th>
-                      <th class="px-10 py-2"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-t">
-                      <td class="px-10 py-2">Macbooks</td>
-                      <td class="px-10 py-2">5</td>
-                      <td class="px-10 py-2">LBs</td>
-                      <td class="px-10 py-2">$500</td>
-                      <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                      <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                    </tr>
-                    <tr class="">
-                      <td class="px-10 py-2">Macbooks</td>
-                      <td class="px-10 py-2">5</td>
-                      <td class="px-10 py-2">LBs</td>
-                      <td class="px-10 py-2">$500</td>
-                      <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                      <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                    </tr>
-                    <tr class="">
-                      <td class="px-10 py-2">Macbooks</td>
-                      <td class="px-10 py-2">5</td>
-                      <td class="px-10 py-2">LBs</td>
-                      <td class="px-10 py-2">$500</td>
-                      <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                      <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                    </tr>
-                    <tr class="">
-                      <td class="px-10 py-2">Macbooks</td>
-                      <td class="px-10 py-2">5</td>
-                      <td class="px-10 py-2">LBs</td>
-                      <td class="px-10 py-2">$500</td>
-                      <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                      <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                    </tr>
-                    <tr class="">
-                      <td class="px-10 py-2">Macbooks</td>
-                      <td class="px-10 py-2">5</td>
-                      <td class="px-10 py-2">LBs</td>
-                      <td class="px-10 py-2">$500</td>
-                      <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                      <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                    </tr>
-                    
-                  </tbody>
-                </table>
-                <div class="w-full flex gap-3">
-                  <div class="flex flex-row gap-2">
-                    <input type="text" name="" id="" placeholder="Title" class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
-                   <input type="text" name="" id="" placeholder="Quantity" class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
-                   <input type="text" name="" id="" placeholder="Unites" class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
-                   <input type="text" name="" id="" placeholder="Price" class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
-                  </div>
-                  
-                  <div>
-                    <button class="text-blue-600 font-semibold py-2 cursor-pointer">Save</button>
-                  </div>
-                 
+
+
+
+      </div>
+      <section class="md:flex md:flex-row md:gap-3 lg:overflow-y-auto">
+
+        <div class="flex flex-col gap-3 md:gap-8">
+          <section class="w-full">
+            <div class="w-full bg-Grey rounded-sm flex flex-col gap-3 lg:flex-row">
+              <form action="" class="w-full flex flex-col gap-2 p-4 lg:w-1/2">
+                <strong>Billed From</strong>
+                <div class="w-full flex gap-2 ">
+                  <input type="text" placeholder="Name"
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                  <input type="text" placeholder="Email"
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
                 </div>
-    
-                <button class="bg-Accent text-white p-2 w-24">Add Item</button>
+
+                <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
+
+              </form>
+
+              <form action="" class="flex flex-col gap-2 p-4 lg:w-1/2">
+                <strong>Billed To</strong>
+                <div class="w-full flex gap-2">
+                  <input type="text" placeholder="Name"
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                  <input type="text" placeholder="Email"
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                </div>
+                <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
+
+              </form>
+            </div>
+          </section>
+          <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4 md:hidden">
+            <label for="">Title</label>
+            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Invoice #</label>
+            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Issue Date</label>
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Due Date</label>
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+          </section>
+
+          <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
+            <div class="overflow-x-auto flex flex-col gap-2">
+              <table class="w-full">
+                <thead>
+                  <tr>
+                    <th class="px-10 py-2 text-left">Title</th>
+                    <th class="px-10 py-2 text-left">Quantity</th>
+                    <th class="px-10 py-2 text-left">Units</th>
+                    <th class="px-10 py-2 text-left">Price/Unit</th>
+                    <th class="px-10 py-2"></th>
+                    <th class="px-10 py-2"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t">
+                    <td class="px-10 py-2">Macbooks</td>
+                    <td class="px-10 py-2">5</td>
+                    <td class="px-10 py-2">LBs</td>
+                    <td class="px-10 py-2">$500</td>
+                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+                  </tr>
+                  <tr class="">
+                    <td class="px-10 py-2">Macbooks</td>
+                    <td class="px-10 py-2">5</td>
+                    <td class="px-10 py-2">LBs</td>
+                    <td class="px-10 py-2">$500</td>
+                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+                  </tr>
+                  <tr class="">
+                    <td class="px-10 py-2">Macbooks</td>
+                    <td class="px-10 py-2">5</td>
+                    <td class="px-10 py-2">LBs</td>
+                    <td class="px-10 py-2">$500</td>
+                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+                  </tr>
+                  <tr class="">
+                    <td class="px-10 py-2">Macbooks</td>
+                    <td class="px-10 py-2">5</td>
+                    <td class="px-10 py-2">LBs</td>
+                    <td class="px-10 py-2">$500</td>
+                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+                  </tr>
+                  <tr class="">
+                    <td class="px-10 py-2">Macbooks</td>
+                    <td class="px-10 py-2">5</td>
+                    <td class="px-10 py-2">LBs</td>
+                    <td class="px-10 py-2">$500</td>
+                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <div class="w-full flex gap-3">
+                <div class="flex flex-row gap-2">
+                  <input type="text" name="" id="" placeholder="Title"
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                  <input type="text" name="" id="" placeholder="Quantity"
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                  <input type="text" name="" id="" placeholder="Unites"
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                  <input type="text" name="" id="" placeholder="Price"
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                </div>
+
+                <div>
+                  <button class="text-blue-600 font-semibold py-2 cursor-pointer">Save</button>
+                </div>
+
               </div>
-            </section>
-    
-            <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4 md:hidden">
-              <div class="flex flex-row justify-between border-b-2">
-                <p>Sub Total</p>
-                <strong>$2500</strong>
-              </div>
-              <label for="">Discount</label>
-              <input type="text" placeholder="Discount" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
-              <label for="">Tax</label>
-              <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
-              <label for="">Shipping</label>
-              <input type="text" placeholder="Shipping" class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
-              <div class="flex flex-row justify-between border-t-2">
-                <p>Amount due</p>
-                <strong>$2500</strong>
-              </div>
-            </section>
-    
-            <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4 md:flex-row">
-              <div class="w-full flex flex-col "> 
-                <label for="">Notes</label>
-                <textarea name="" id="" placeholder="Notes" class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
-              </div>
-    
-              <div class="w-full flex flex-col">
-                <label for="">Terms & Conditions</label>
-                <textarea name="" id="" placeholder="Terms & Conditions" class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
-              </div>
-            </section>
-    
-            <button class="bg-Grey2 text-white py-3 md:hidden">Download PDF</button>
-  
 
-          </div>
+              <button class="bg-Accent text-white p-2 w-24">Add Item</button>
+            </div>
+          </section>
 
-          <aside class="hidden md:flex md:flex-col md:gap-3 md:w-1/2">
-            <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
-              <label for="">Title</label>
-              <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Invoice #</label>
-              <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Issue Date</label>
-              <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-              <label for="">Due Date</label>
-              <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
-            </section>
+          <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4 md:hidden">
+            <div class="flex flex-row justify-between border-b-2">
+              <p>Sub Total</p>
+              <strong>$2500</strong>
+            </div>
+            <label for="">Discount</label>
+            <input type="text" placeholder="Discount"
+              class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <label for="">Tax</label>
+            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <label for="">Shipping</label>
+            <input type="text" placeholder="Shipping"
+              class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
+            <div class="flex flex-row justify-between border-t-2">
+              <p>Amount due</p>
+              <strong>$2500</strong>
+            </div>
+          </section>
 
-            <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4">
-              <div class="flex flex-row justify-between border-b-2">
-                <p>Sub Total</p>
-                <strong>$2500</strong>
-              </div>
-              <label for="">Discount</label>
-              <input type="text" placeholder="Discount" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
-              <label for="">Tax</label>
-              <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
-              <label for="">Shipping</label>
-              <input type="text" placeholder="Shipping" class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
-              <div class="flex flex-row justify-between border-t-2">
-                <p>Amount due</p>
-                <strong>$2500</strong>
-              </div>
-            </section>
+          <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4 md:flex-row">
+            <div class="w-full flex flex-col ">
+              <label for="">Notes</label>
+              <textarea name="" id="" placeholder="Notes"
+                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
+            </div>
 
-          </aside>
+            <div class="w-full flex flex-col">
+              <label for="">Terms & Conditions</label>
+              <textarea name="" id="" placeholder="Terms & Conditions"
+                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
+            </div>
+          </section>
 
-        
-        </section>
- 
-       
-        
-
-        
+          <button class="bg-Grey2 text-white py-3 md:hidden">Download PDF</button>
 
 
+        </div>
 
-        
-      
-  
+        <aside class="hidden md:flex md:flex-col md:gap-3 md:w-1/2">
+          <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
+            <label for="">Title</label>
+            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Invoice #</label>
+            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Issue Date</label>
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <label for="">Due Date</label>
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+          </section>
+
+          <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4">
+            <div class="flex flex-row justify-between border-b-2">
+              <p>Sub Total</p>
+              <strong>$2500</strong>
+            </div>
+            <label for="">Discount</label>
+            <input type="text" placeholder="Discount"
+              class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <label for="">Tax</label>
+            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <label for="">Shipping</label>
+            <input type="text" placeholder="Shipping"
+              class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
+            <div class="flex flex-row justify-between border-t-2">
+              <p>Amount due</p>
+              <strong>$2500</strong>
+            </div>
+          </section>
+
+        </aside>
 
 
-  </section>
-    </main>
-  </body>
-  <script>
-    const menuIcon = document.getElementById("menu-icon");
-    const menuItems = document.getElementById("menu-items");
-    const exit = document.getElementById("exit");
-    menuIcon.addEventListener("click", function () {
-      menuItems.classList.toggle("hidden");
-      menuItems.classList.add("flex");
-      menuIcon.classList.toggle("hidden");
-      exit.classList.toggle("hidden");
-    });
+      </section>
 
-    exit.addEventListener("click", function () {
-      exit.classList.toggle("hidden");
-      menuItems.classList.toggle("hidden");
-      menuItems.classList.remove("flex");
-      menuIcon.classList.toggle("hidden");
-    });
 
-    const menuTexts = document.querySelectorAll(".menu-text");
-    const navBrand = document.getElementById("nav-brand");
-    const navBrand2 = document.getElementById("nav-brand2");
-    navBrand.addEventListener("click", function () {
-      navBrand2.classList.toggle("hidden");
-      navBrand.classList.toggle("hidden");
-    });
-  </script>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+  </main>
+</body>
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const menuItems = document.getElementById("menu-items");
+  const exit = document.getElementById("exit");
+  menuIcon.addEventListener("click", function () {
+    menuItems.classList.toggle("hidden");
+    menuItems.classList.add("flex");
+    menuIcon.classList.toggle("hidden");
+    exit.classList.toggle("hidden");
+  });
+
+  exit.addEventListener("click", function () {
+    exit.classList.toggle("hidden");
+    menuItems.classList.toggle("hidden");
+    menuItems.classList.remove("flex");
+    menuIcon.classList.toggle("hidden");
+  });
+
+  const menuTexts = document.querySelectorAll(".menu-text");
+  const navBrand = document.getElementById("nav-brand");
+  const navBrand2 = document.getElementById("nav-brand2");
+  navBrand.addEventListener("click", function () {
+    navBrand2.classList.toggle("hidden");
+    navBrand.classList.toggle("hidden");
+  });
+
+  const Distributa = document.getElementById("distributa");
+  const Colasp = document.getElementById("colasp");
+  const Aside = document.getElementById("aside");
+  Distributa.addEventListener("click", function () {
+    Colasp.classList.toggle("hidden");
+    Aside.classList.add("hidden");
+    Colasp.classList.add("flex", "flex-col", "justify-between")
+  });
+
+  const DB = document.getElementById("db");
+  DB.addEventListener("click", function () {
+    Colasp.classList.add("hidden");
+    Aside.classList.remove("hidden");
+    console.log("am fine");
+  });
+</script>
+
 </html>

@@ -1,412 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Transaction </title>
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body>
-   <div class="h-screen  w-full  bg-Black bg-opacity-90 hidden absolute z-30" id="details">
-      <section  class="bg-White w-full md:w-1/3 ">
-         <div class="flex justify-between p-4 bg-Grey">
-             <p>Transaction Details</p>
-             <figure id="close" class="cursor-pointer">
-               <img src="./Img/x-circle.png" alt="">
-             </figure>
-         </div>
-         <div class="p-4 flex flex-col gap-3">
-            <p>March 16</p>
-            <div class="flex flex-row justify-between">
-               <p>Rent Income</p>
-               <p>+500</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Transaction</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div
+      class="h-screen w-full bg-Black bg-opacity-90 hidden absolute z-30"
+      id="details"
+    >
+      <section class="bg-White w-full md:w-1/3">
+        <div class="flex justify-between p-4 bg-Grey">
+          <p>Transaction Details</p>
+          <figure id="close" class="cursor-pointer">
+            <img src="./Img/x-circle.png" alt="" />
+          </figure>
+        </div>
+        <div class="p-4 flex flex-col gap-3">
+          <p>March 16</p>
+          <div class="flex flex-row justify-between">
+            <p>Rent Income</p>
+            <p>+500</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+            adipisci beatae fuga iusto eveniet provident repellat earum tempora
+            sunt, animi optio, atque hic vero vel. Corporis sunt dolorem velit
+            ipsa.
+          </p>
+          <div class="flex flex-row justify-between border-b">
+            <p>Income/Expense</p>
+            <p class="underline">Placeholder</p>
+          </div>
+          <div class="flex flex-row justify-between border-b">
+            <p>Category</p>
+            <p class="underline">Placeholder</p>
+          </div>
+          <div class="flex flex-row justify-between border-b">
+            <p>Receipt</p>
+            <p class="underline">Placeholder</p>
+          </div>
+          <div class="flex flex-row justify-between border-b">
+            <p>Method</p>
+            <p class="underline">Placeholder</p>
+          </div>
+          <div class="flex flex-row justify-between border-b">
+            <p>Payee</p>
+            <p class="underline">Placeholder</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      class="h-screen w-screen bg-Black bg-opacity-90 hidden absolute z-30"
+      id="newTransaction"
+    >
+      <section class="bg-White w-full md:w-1/3">
+        <div class="flex justify-between p-4 bg-Grey">
+          <p>Add New Transaction</p>
+          <figure id="exist" class="cursor-pointer">
+            <img src="./Img/x-circle.png" alt="" class="w-6 h-6" />
+          </figure>
+        </div>
+
+        <div class="p-4 flex flex-col gap-3">
+          <div class="flex flex-row gap-4">
+            <button class="bg-Grey border border-none w-1/2 p-4">
+              Expense
+            </button>
+            <button class="bg-Grey border border-Black w-1/2 p-4">
+              Income
+            </button>
+          </div>
+          <div class="w-full flex flex-row gap-3">
+            <div class="w-full flex flex-col gap-1">
+              <label for="">Date</label>
+              <input
+                type="date"
+                placeholder="DD/MM/YY"
+                class="border border-Grey2 p-5"
+              />
             </div>
-            <p> 
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-               Numquam adipisci beatae fuga iusto eveniet provident repellat 
-               earum tempora sunt, animi optio, atque hic vero vel. Corporis 
-               sunt dolorem velit ipsa.
-            </p>
-            <div class="flex flex-row justify-between border-b">
-               <p>Income/Expense</p>
-               <p class="underline">Placeholder</p>
+            <div class="flex flex-col gap-1">
+              <label for="">Item</label>
+              <input
+                type="text"
+                placeholder="Item"
+                class="border border-Grey2 p-5 text-Black"
+              />
             </div>
-            <div class="flex flex-row justify-between border-b">
-               <p>Category</p>
-               <p class="underline">Placeholder</p>
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="">Amount</label>
+            <input
+              type="text"
+              placeholder="Payee"
+              class="border border-Grey2 p-5 text-Black"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label for="">Description</label>
+            <textarea
+              name=""
+              id=""
+              placeholder="Description"
+              class="border border-Grey2 p-5 text-Black"
+            ></textarea>
+          </div>
+          <div class="w-full flex flex-row gap-3">
+            <div class="w-full flex flex-col gap-1">
+              <label for="">Payee</label>
+              <input
+                type="text"
+                placeholder="Payee"
+                class="border border-Grey2 p-5 text-Black"
+              />
             </div>
-            <div class="flex flex-row justify-between border-b">
-               <p>Receipt</p>
-               <p class="underline">Placeholder</p>
+            <div class="w-full flex flex-col gap-1">
+              <label for="">Receipt/Voucher #</label>
+              <input
+                type="text"
+                placeholder="00007"
+                class="border border-Grey2 p-5 text-Black"
+              />
             </div>
-            <div class="flex flex-row justify-between border-b">
-               <p>Method</p>
-               <p class="underline">Placeholder</p>
+          </div>
+          <div class="w-full flex flex-row gap-3">
+            <div class="w-full flex flex-col gap-1">
+              <label for="">Payment Method</label>
+              <select name="" id="" class="border border-Grey2 p-5 text-Black">
+                <option value="">Payee</option>
+                <option value="">Cash</option>
+                <option value="">Check</option>
+              </select>
             </div>
-            <div class="flex flex-row justify-between border-b">
-               <p>Payee</p>
-               <p class="underline">Placeholder</p>
+            <div class="w-full flex flex-col gap-1">
+              <label for="">Category</label>
+              <select name="" id="" class="border border-Grey2 p-5 text-Black">
+                <option value="">Select one</option>
+                <option value="">Cash</option>
+                <option value="">Check</option>
+              </select>
             </div>
-   
-         </div>
-           
-       </section> 
-   </div> 
-   <div class="h-screen w-screen  bg-Black bg-opacity-90  hidden  absolute  z-30" id="newTransaction">
-      <section  class="bg-White w-full md:w-1/3 ">
-         <div class="flex justify-between p-4 bg-Grey">
-             <p>Add New Transaction</p>
-             <figure id="exist" class="cursor-pointer">
-               <img src="./Img/x-circle.png" alt="" class="w-6 h-6">
-             </figure>
-         </div>
-        
-         <div class="p-4 flex flex-col gap-3">
-            <div class="flex flex-row gap-4">
-               <button class="bg-Grey border border-none w-1/2 p-4">Expense</button>
-               <button class="bg-Grey border border-Black w-1/2 p-4">Income</button>
+          </div>
+
+          <button class="text-white bg-Accent p-4 text-2xl">Add</button>
+        </div>
+      </section>
+    </div>
+
+    <main class="m-3 relative md:flex md:gap-12">
+      <aside
+        class="h-full flex flex-row justify-between lg:flex-col lg:h-screen"
+      >
+        <h1
+          class="text-2xl p-5 font-semibold text-Accent underline decoration-Black cursor-pointer md:hidden md:no-underline md:no-decoration"
+          id="nav-brand"
+        >
+          Distributa
+        </h1>
+
+        <svg
+          id="menu-icon"
+          class="w-8 h-8 cursor-pointer mt-5 mr-2 lg:hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          id="exit"
+          class="hidden w-8 h-8"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <div
+          id="menu-items"
+          class="hidden w-fit h-1/2 flex-col justify-between shadow-lg bg-White absolute right-0 top-10 py-5 z-30 lg:w-48 lg:h-full lg:flex lg:static lg:shadow-none lg:py-0"
+        >
+          <div class="w-full flex flex-col gap-6">
+            <h1
+              class="hidden text-2xl p-5 font-semibold text-Accent font-satoshi underline decoration-Black cursor-pointer md:flex md:no-underline md:no-decoration"
+            >
+              Distributa
+            </h1>
+            <a href="./MyInvoice2.html">
+              <div
+                class="flex gap-4 items-center cursor-pointer p-2 hover:bg-Grey rounded-md"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M14 2V8H20"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 13H8"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16 17H8"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10 9H9H8"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-Black menu-text">My Invoices</p>
+              </div>
+            </a>
+            <a href="./myInvoiceE.html">
+              <div
+                class="flex gap-4 items-center w-full cursor-pointer p-2 hover:bg-Grey rounded-md"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12 8V16"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8 12H16"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-Black menu-text">New Invoices</p>
+              </div>
+            </a>
+            <a href="./Transaction.html">
+              <div
+                class="flex gap-4 items-center cursor-pointer p-2 hover:bg-Grey rounded-md"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <p class="text-lg text-Black menu-text">My Transactions</p>
+              </div>
+            </a>
+          </div>
+          <div class="p-5 cursor-pointer hover:bg-Grey rounded-md">
+            <a href="./index.html"><p>Log Out</p></a>
+            <p>Settings</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="flex flex-col gap-4 md:w-full">
+        <h1 class="text-2xl font-archivo md:text-4xl">My Transactions</h1>
+
+        <div class="flex flex-col gap-4 md:w-full md:flex md:flex-row-reverse">
+          <section class="flex flex-col gap-2 md:w-1/2">
+            <div class="flex gap-2">
+              <div class="bg-Grey py-6 w-1/2 flex flex-col items-center">
+                <p class="text-3xl font-semibold font-archivo">5,000ugx</p>
+                <p>Income this month</p>
+              </div>
+              <div class="bg-Grey py-6 w-1/2 flex flex-col items-center">
+                <p class="text-3xl font-semibold font-archivo">5,000ugx</p>
+                <p>Income this month</p>
+              </div>
             </div>
-             <div class="w-full flex flex-row gap-3">
-                <div class="w-full flex flex-col gap-1">
-                  <label for="">Date</label>
-                  <input type="date" placeholder="DD/MM/YY" class="border border-Grey2 p-5">
+            <button class="bg-Grey text-Accent p-2">Export PDF Report</button>
+            <button class="bg-Accent text-white p-2" id="addNew">
+              Add New
+            </button>
+          </section>
+          <section class="flex flex-col gap-4 md:w-full">
+            <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md">
+              <div class="flex justify-between">
+                <p>March 16</p>
+                <p>+1250</p>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Rent Income</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+500</p>
+                  <p class="more-details underline cursor-pointer" id="view">
+                    See Details
+                  </p>
                 </div>
-                <div class="flex flex-col gap-1">
-                  <label for="">Item</label>
-                  <input type="text" placeholder="Item"  class="border border-Grey2 p-5 text-Black">
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Mobile Topup</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>-700</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-             </div>
-             <div class="flex flex-col gap-1">
-               <label for="">Amount</label>
-               <input type="text" placeholder="Payee"  class="border border-Grey2 p-5 text-Black">
-             </div>
-             <div class="flex flex-col gap-1">
-               <label for="">Description</label>
-               <textarea name="" id="" placeholder="Description" class="border border-Grey2 p-5 text-Black"></textarea>
-               
-             </div>
-             <div class="w-full flex flex-row gap-3">
-               <div class="w-full flex flex-col gap-1">
-                 <label for="">Payee</label>
-                 <input type="text" placeholder="Payee" class="border border-Grey2 p-5 text-Black">
-               </div>
-               <div class="w-full flex flex-col gap-1">
-                 <label for="">Receipt/Voucher #</label>
-                 <input type="text" placeholder="00007" class="border border-Grey2 p-5 text-Black">
-               </div>
-            </div>
-            <div class="w-full flex flex-row gap-3">
-               <div class="w-full flex flex-col gap-1">
-                 <label for="">Payment Method</label>
-                 <select name="" id="" class="border border-Grey2 p-5 text-Black">
-                  <option value="">Payee</option>
-                  <option value="">Cash</option>
-                  <option value="">Check</option>
-                 </select>
-               </div>
-               <div class="w-full flex flex-col gap-1">
-                  <label for="">Category</label>
-                  <select name="" id="" class="border border-Grey2 p-5 text-Black">
-                   <option value="">Select one</option>
-                   <option value="">Cash</option>
-                   <option value="">Check</option>
-                  </select>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Client Payment</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+1450</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-
-            </div>
-
-            <button class="text-white bg-Accent p-4 text-2xl ">Add</button>
-               
-            
-           
-   
-         </div>
-           
-       </section> 
-   </div> 
-   
-   <main class="m-3  relative md:flex md:gap-12 ">
-        <nav class="flex justify-between md:hidden">
-            <img src="./Img/mobile.svg" alt="">
-            <img src="./Img/menu.png" alt="">
-        </nav>
-       
-        <aside class="hidden md:w-52 md:flex  md:flex-col justify-between">
-           
-            <div class="w-full flex flex-col gap-10">
-               <img class="w-32 h-24 " src="./Img/desktop.svg" alt="">
-                <div class="flex gap-4">
-                  <svg
-                    class=""
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M14 2V8H20"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 13H8"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16 17H8"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M10 9H9H8"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p class="text-lg text-Black">My Invoices</p>
+              </div>
+            </section>
+            <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md">
+              <div class="flex justify-between">
+                <p>March 16</p>
+                <p>+1250</p>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Rent Income</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+500</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-                <div class="flex gap-4">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M12 8V16"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8 12H16"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p class="text-lg text-Black">New Invoices</p>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Mobile Topup</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>-700</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-                <div class="w-full flex gap-4">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <p class="text-lg text-Black">My Transactions</p>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Client Payment</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+1450</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-            </div>
-              <div class="p-5">
-                 <a href="./index.html"><p>Log Out</p></a>
-                 <p>Settings</p>
-            </div>
-        </aside>
-
-       <section class="flex flex-col gap-4 md:w-full ">
-          <h1 class="text-2xl font-archivo  md:text-4xl">My Transactions</h1>
-
-        
-          <div class="flex flex-col gap-4 md:w-full md:flex md:flex-row-reverse">
-            <section class="flex flex-col gap-2 md:w-1/2">
-                <div class="flex gap-2">
-                    <div class="bg-Grey py-6 w-1/2 flex flex-col items-center">
-                        <p class="text-3xl font-semibold font-archivo">5,000ugx</p>
-                        <p>Income this month</p>
-                    </div>
-                    <div class="bg-Grey py-6 w-1/2 flex flex-col items-center">
-                        <p class="text-3xl font-semibold font-archivo">5,000ugx</p>
-                        <p>Income this month</p>
-                    </div>
+              </div>
+            </section>
+            <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md">
+              <div class="flex justify-between">
+                <p>March 16</p>
+                <p>+1250</p>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Rent Income</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+500</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
                 </div>
-                 <button class="bg-Grey text-Accent p-2">Export PDF Report</button>
-                 <button class="bg-Accent text-white p-2" id="addNew">Add New</button>
-
-                 
-             </section>
-             <section class="flex flex-col gap-4 md:w-full">
-
-              
-                <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md ">
-                    <div class="flex justify-between">
-                        <p>March 16</p>
-                        <p>+1250</p>
-                           
-                    </div>
-                       <div class="flex justify-between border-b">
-                          <p>Rent Income</p>
-                          <div class="flex gap-3 md:gap-5">
-                             <p>+500</p>
-                             <p class="underline cursor-pointer" id="view" >See Details</p>
-                          </div>
-                          
-                       </div>
-                       <div class="flex justify-between border-b">
-                           <p>Mobile Topup</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>-700</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                        <div class="flex justify-between border-b">
-                           <p>Client Payment</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>+1450</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                </section>
-                <section class="bg-Grey p-6  flex flex-col gap-10 rounded-md">
-                    <div class="flex justify-between">
-                        <p>March 16</p>
-                        <p>+1250</p>
-                           
-                    </div>
-                       <div class="flex justify-between border-b">
-                          <p>Rent Income</p>
-                          <div class="flex gap-3 md:gap-5">
-                             <p>+500</p>
-                             <p class="underline">See Details</p>
-                          </div>
-                          
-                       </div>
-                       <div class="flex justify-between border-b">
-                           <p>Mobile Topup</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>-700</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                        <div class="flex justify-between border-b">
-                           <p>Client Payment</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>+1450</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                </section>
-                <section class="bg-Grey p-6 flex flex-col gap-10 rounded-md">
-                    <div class="flex justify-between">
-                        <p>March 16</p>
-                        <p>+1250</p>
-                           
-                    </div>
-                       <div class="flex justify-between border-b">
-                          <p>Rent Income</p>
-                          <div class="flex gap-3 md:gap-5">
-                             <p>+500</p>
-                             <p class="underline">See Details</p>
-                          </div>
-                          
-                       </div>
-                       <div class="flex justify-between border-b">
-                           <p>Mobile Topup</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>-700</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                        <div class="flex justify-between border-b">
-                           <p>Client Payment</p>
-                           <div class="flex gap-3 md:gap-5">
-                              <p>+1450</p>
-                              <p class="underline">See Details</p>
-                           </div>
-                        </div>
-                </section>
-               
-               
-          
-             </section>
-
-          </div>  
-        
-       </section>
-
-
-      
-
-
-    </main>   
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Mobile Topup</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>-700</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-between border-b">
+                <p>Client Payment</p>
+                <div class="flex gap-3 md:gap-5">
+                  <p>+1450</p>
+                  <p class="more-details underline cursor-pointer">
+                    See Details
+                  </p>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
     <script>
-    
-
-
-      const view = document.getElementById("view");
-      const details = document.getElementById("details");
-     
-  
-      view.addEventListener("click",function(){
-         details.classList.toggle("hidden");
-         details.classList.add("flex","justify-center","items-center")
+      const menuIcon = document.getElementById("menu-icon");
+      const menuItems = document.getElementById("menu-items");
+      const exit = document.getElementById("exit");
+      menuIcon.addEventListener("click", function () {
+        menuItems.classList.toggle("hidden");
+        menuItems.classList.add("flex");
+        menuIcon.classList.toggle("hidden");
+        exit.classList.toggle("hidden");
       });
 
+      exit.addEventListener("click", function () {
+        exit.classList.toggle("hidden");
+        menuItems.classList.toggle("hidden");
+        menuItems.classList.remove("flex");
+        menuIcon.classList.toggle("hidden");
+      });
 
-     const close = document.getElementById("close");
-     close.addEventListener("click",function(){
-        details.classList.add("hidden")
-     });
+      const menuTexts = document.querySelectorAll(".menu-text");
+      const navBrand = document.getElementById("nav-brand");
+      const navBrand2 = document.getElementById("nav-brand2");
+      navBrand.addEventListener("click", function () {
+        navBrand2.classList.toggle("hidden");
+        navBrand.classList.toggle("hidden");
+      });
+
+      // const view = document.getElementById("view");
+      // const details = document.getElementById("details");
+
+      // view.addEventListener("click",function(){
+      //    details.classList.toggle("hidden");
+      //    details.classList.add("flex","justify-center","items-center")
+      // });
+
+      const close = document.getElementById("close");
+      close.addEventListener("click", function () {
+        details.classList.add("hidden");
+      });
 
       const addNew = document.getElementById("addNew");
       const newTransaction = document.getElementById("newTransaction");
-      addNew.addEventListener("click",function(){
-      newTransaction.classList.toggle("hidden");  
-      newTransaction.classList.add("flex","justify-center","items-center");
-        
-    });
-     
-   const exist = document.getElementById("exist")
-   exist.addEventListener("click", function(){
-    newTransaction.classList.add("hidden");
-   });
-     
+      addNew.addEventListener("click", function () {
+        newTransaction.classList.toggle("hidden");
+        newTransaction.classList.add("flex", "justify-center", "items-center");
+      });
 
-     
-   </script>
-    
-</body>
+      const exist = document.getElementById("exist");
+      exist.addEventListener("click", function () {
+        newTransaction.classList.add("hidden");
+      });
 
+      const Mdetails = document.getElementsByClassName("more-details");
+      for (let k = 0; k < Mdetails.length; k++) {
+        Mdetails[k].addEventListener("click", function () {
+          details.classList.toggle("hidden");
+          details.classList.add("flex", "justify-center", "items-center");
+        });
+      }
+    </script>
+  </body>
 </html>

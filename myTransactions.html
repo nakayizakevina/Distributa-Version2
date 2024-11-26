@@ -1,195 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My transactions Emptystate</title>
-    <link rel="stylesheet" href="./output.css">
-</head>
-<body class="w-screen h-screen bg-White  relative flex flex-col lg:flex-row">
-    <div class="w-full h-fit flex justify-between  lg:w-[15%] lg:h-full lg:flex lg:flex-col">
-        <h1 class="text-2xl p-5 font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand">Distributa</h1>
-        <h1 class="hidden text-2xl font-semibold text-Accent underline decoration-Black cursor-pointer" id="nav-brand2">Db</h1>
-        
-        <div class="hidden  h-[90%] flex-col justify-between  py-5 mt-2 lg:flex">
-            <div class="w-full flex flex-col p-8 gap-6">
-                <div class="flex gap-4 items-center">
-                   <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <p class="text-lg text-Black menu-text">My Invoices</p>
-                </div>
-                
-                <div class="flex gap-4  items-center w-full"> 
-                     <svg width="24"  height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8 12H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg> 
-                    <p class="text-lg text-Black menu-text">New Invoices</p>   
-                </div>
-                <div class="flex gap-4 items-center">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <p class="text-lg text-Black menu-text" >My Transactions</p>    
-                </div>
-            </div>
-            <div class="p-5">
-              <a href="./index.html"><p>Log Out</p></a>  
-                <p>Settings</p>
-            </div>
-        </div>
-        <svg id="menu-icon" class="w-8 h-8 cursor-pointer mt-5 mr-2 lg:hidden"
-         xmlns="http://www.w3.org/2000/svg" fill="none" 
-         viewBox="0 0 24 24" 
-         stroke-width="2.5" 
-         stroke="currentColor" >
-         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-        <svg id="exit" class="hidden w-8 h-8"
-        xmlns="http://www.w3.org/2000/svg" 
-        fill="none" viewBox="0 0 24 24" 
-        stroke-width="1.5" 
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-       </svg>
-     
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="w-screen h-screen bg-White relative flex flex-col lg:flex-row">
+    <div id="colasp" class="hidden w-24 h-full">
+      <div class="w-full h-1/2 gap-10 px-4 flex flex-col">
+        <img
+          id="db"
+          class="w-12 h-12 cursor-pointer"
+          src="./Img/db.svg"
+          alt=""
+        />
+        <a href="./MyInvoice2.html">
+          <img class="w-8 h-8" src="././Img/clipboard.svg" alt="" />
+        </a>
+        <a href="./myInvoiceE.html">
+          <img class="w-8 h-8" src="./Img/file-text 1.png" alt="" />
+        </a>
+        <a href="./Transaction.html">
+          <img class="w-8 h-8" src="./Img/book.png" alt="" />
+        </a>
+      </div>
+      <div class="p-5 cursor-pointer hover:bg-Grey rounded-md">
+        <a href="./index.html"><p>Log Out</p></a>
+        <p>Settings</p>
+      </div>
     </div>
+    <aside id="aside" class="flex flex-row justify-between lg:flex-col">
+      <h1
+        class="text-2xl p-1 font-semibold text-Accent underline decoration-Black cursor-pointer md:hidden md:no-underline md:no-decoration"
+        id="nav-brand"
+      >
+        Distributa
+      </h1>
+
+      <svg
+        id="menu-icon"
+        class="w-8 h-8 cursor-pointer mt-5 mr-2 lg:hidden"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+      <svg
+        id="exit"
+        class="hidden w-8 h-8"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
+      </svg>
+      <div
+        id="menu-items"
+        class="hidden w-fit h-full flex-col justify-between shadow-lg bg-White absolute right-0 top-10 py-5 lg:w-48 lg:flex lg:static lg:shadow-none lg:py-0"
+      >
+        <div class="w-full flex flex-col gap-6">
+          <h1
+            id="distributa"
+            class="hidden text-2xl p-5 font-semibold text-red-500 font-satoshi underline decoration-Black cursor-pointer md:flex md:no-underline md:no-decoration"
+          >
+            Distributa
+          </h1>
+          <a href="./MyInvoice2.html">
+            <div class="flex gap-4 cursor-pointer p-2 hover:bg-Grey rounded-md">
+              <svg
+                class=""
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M14 2V8H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 13H8"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16 17H8"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M10 9H9H8"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p class="text-lg text-Black">My Invoices</p>
+            </div>
+          </a>
+
+          <a href="./myInvoiceE.html">
+            <div class="flex gap-4 cursor-pointer p-2 hover:bg-Grey rounded-md">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 8V16"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8 12H16"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p class="text-lg text-Black">New Invoices</p>
+            </div>
+          </a>
+          <a href="./Transaction.html">
+            <div
+              class="w-full flex gap-4 cursor-pointer p-2 hover:bg-Grey rounded-md"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <p class="text-lg text-Black">My Transactions</p>
+            </div>
+          </a>
+        </div>
+        <div class="p-5 cursor-pointer hover:bg-Grey rounded-md">
+          <a href="./index.html"><p>Log Out</p></a>
+          <p>Settings</p>
+        </div>
+      </div>
+    </aside>
+
     <!-- smaller screens  -->
-    <div id="menu-items"  class="hidden w-fit h-[90%] flex-col justify-between shadow-lg  bg-White  absolute right-0 top-10 py-5 lg:hidden">
-        <div class="w-full flex flex-col p-10 gap-6 ">
-            <div class="flex gap-4">
-               <svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p class="text-lg text-Black">My Invoices</p>
-            </div>
-            
-            <div class="flex gap-4"> 
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 8V16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M8 12H16" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p class="text-lg text-Black">New Invoices</p>   
-            </div>
-            <div class="flex gap-4">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                <p class="text-lg text-Black">My Transactions</p>    
-            </div>
+    <div
+      id="menu-items"
+      class="hidden w-fit h-[90%] flex-col justify-between shadow-lg bg-White absolute right-0 top-10 py-5 lg:hidden"
+    >
+      <div class="w-full flex flex-col p-10 gap-6">
+        <div class="flex gap-4">
+          <svg
+            class=""
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M14 2V8H20"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 13H8"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 17H8"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M10 9H9H8"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="text-lg text-Black">My Invoices</p>
         </div>
-        <div class="p-5">
-            <a href="./index.html"><p>Log Out</p></a>
-            <p>Settings</p>
+
+        <div class="flex gap-4">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 8V16"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8 12H16"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="text-lg text-Black">New Invoices</p>
         </div>
+        <div class="flex gap-4">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 19.5C4 18.837 4.26339 18.2011 4.73223 17.7322C5.20107 17.2634 5.83696 17 6.5 17H20"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6.5 2H20V22H6.5C5.83696 22 5.20107 21.7366 4.73223 21.2678C4.26339 20.7989 4 20.163 4 19.5V4.5C4 3.83696 4.26339 3.20107 4.73223 2.73223C5.20107 2.26339 5.83696 2 6.5 2V2Z"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="text-lg text-Black">My Transactions</p>
+        </div>
+      </div>
+      <div class="p-5">
+        <a href="./index.html"><p>Log Out</p></a>
+        <p>Settings</p>
+      </div>
     </div>
-   
+
     <div class="w-full h-full flex flex-col justify-evenly gap-3">
-        <h1 class="text-lg font-semibold p-5 text-Black lg:mt-5 lg:text-3xl">My Invoices</h1>
-        <div class="w-full flex justify-end">
-            
-            <button class="bg-Accent text-white text-sm w-fit px-4 py-2 mr-2 cursor-pointer capitalize lg:text-lg lg:mr-5 lg:w-64 ">Create New Invoices</button>
-        </div>
-        <div id="container" class="w-full h-full overflow-y-auto">
-            
-        </div>
-        
+      <h1 class="text-lg font-semibold p-5 text-Black lg:mt-5 lg:text-3xl">
+        My Invoices
+      </h1>
+      <div class="w-full flex justify-end">
+        <button
+          class="create-btn bg-Accent text-white text-sm w-fit px-4 py-2 mr-2 cursor-pointer capitalize lg:text-lg lg:mr-5 lg:w-64"
+        >
+          Create New Invoices
+        </button>
+      </div>
+      <div id="container" class="w-full h-full overflow-y-auto"></div>
     </div>
-    
-</body>
-<script>
+  </body>
+  <script>
     const menuIcon = document.getElementById("menu-icon");
     const menuItems = document.getElementById("menu-items");
     const exit = document.getElementById("exit");
-    menuIcon.addEventListener('click',function(){
-     menuItems.classList.toggle("hidden");
-     menuItems.classList.add("flex");
-     menuIcon.classList.toggle("hidden");
-     exit.classList.toggle("hidden")
+    menuIcon.addEventListener("click", function () {
+      menuItems.classList.toggle("hidden");
+      menuItems.classList.add("flex");
+      menuIcon.classList.toggle("hidden");
+      exit.classList.toggle("hidden");
     });
 
-    exit.addEventListener("click",function(){
-        exit.classList.toggle("hidden") 
-        menuItems.classList.toggle("hidden");
-        menuItems.classList.remove("flex");
-     menuIcon.classList.toggle("hidden");
-    })
+    exit.addEventListener("click", function () {
+      exit.classList.toggle("hidden");
+      menuItems.classList.toggle("hidden");
+      menuItems.classList.remove("flex");
+      menuIcon.classList.toggle("hidden");
+    });
 
-    
-    const menuTexts = document.querySelectorAll(".menu-text")
-  const navBrand = document.getElementById("nav-brand");
-  const navBrand2 = document.getElementById("nav-brand2");
-  navBrand.addEventListener("click", function(){
-  navBrand2.classList.toggle("hidden");
-  navBrand.classList.toggle("hidden");
+    const Distributa = document.getElementById("distributa");
+    const Colasp = document.getElementById("colasp");
+    const Aside = document.getElementById("aside");
+    Distributa.addEventListener("click", function () {
+      Colasp.classList.toggle("hidden");
+      Aside.classList.add("hidden");
+      Colasp.classList.add("flex", "flex-col", "justify-between");
+    });
 
-    for( let index = 0; index < menuTexts.length; index++) {
-        const menuText= menuTexts[index]
-        menuText.classList.toggle("hidden");
-      }
-  });
+    const DB = document.getElementById("db");
+    DB.addEventListener("click", function () {
+      Colasp.classList.add("hidden");
+      Aside.classList.remove("hidden");
+    });
 
-  navBrand2.addEventListener("click", function(){
-  navBrand.classList.toggle("hidden");
-  navBrand2.classList.toggle("hidden");
-  
-  for( let index = 0; index < menuTexts.length; index++) {
-        const menuText= menuTexts[index]
-        menuText.classList.toggle("hidden");
-      }
-  });
-
-  const container = document.getElementById("container");
-  const newContent = document.createElement("div");
-  newContent.className = "w-full h-full flex justify-center items-center"
-  const emptyStateContent = document.createElement("div")
-  emptyStateContent.className = "flex flex-col items-center gap-y-2 w-fit h-fit"
-  const iconContainer = document.createElement("div")
-  iconContainer.className = "h-fit w-fit p-5 rounded-full bg-Grey "
-  iconContainer.innerHTML = `<svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const container = document.getElementById("container");
+    const newContent = document.createElement("div");
+    newContent.className = "w-full h-full flex justify-center items-center";
+    const emptyStateContent = document.createElement("div");
+    emptyStateContent.className =
+      "flex flex-col items-center gap-y-2 w-fit h-fit";
+    const iconContainer = document.createElement("div");
+    iconContainer.className = "h-fit w-fit p-5 rounded-full bg-Grey ";
+    iconContainer.innerHTML = `<svg class="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M14 2V8H20" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16 13H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M16 17H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M10 9H9H8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>`
-    const invoiceHeading = document.createElement('h2')
-    invoiceHeading.className = "text-lg font-semibold text-Black capitalize"
-    invoiceHeading.innerText = "no invoices"
+                    </svg>`;
+    const invoiceHeading = document.createElement("h2");
+    invoiceHeading.className = "text-lg font-semibold text-Black capitalize";
+    invoiceHeading.innerText = "no invoices";
 
-    const invoiceText = document.createElement('p')
-    invoiceText.className = "text-Black text-sm"
-    invoiceText.innerText = "You haven't created any invoice yet."
+    const invoiceText = document.createElement("p");
+    invoiceText.className = "text-Black text-sm";
+    invoiceText.innerText = "You haven't created any invoice yet.";
 
-    const noInvoicesCTA = document.createElement("button")
-    noInvoicesCTA.className = "bg-Accent text-white text-sm w-fit px-4 py-2 cursor-pointer capitalize"
-    noInvoicesCTA.innerText = "Create New Invoice"
-    noInvoicesCTA.addEventListener('click', function(){
-         });
+    const noInvoicesCTA = document.createElement("button");
+    noInvoicesCTA.className =
+      "create-btn bg-Accent text-white text-sm w-fit px-4 py-2 cursor-pointer capitalize";
+    noInvoicesCTA.innerText = "Create New Invoice";
+    noInvoicesCTA.addEventListener("click", function () {});
 
-    newContent.appendChild(emptyStateContent);    
+    newContent.appendChild(emptyStateContent);
     emptyStateContent.appendChild(iconContainer);
     emptyStateContent.appendChild(invoiceHeading);
     emptyStateContent.appendChild(invoiceText);
     emptyStateContent.appendChild(noInvoicesCTA);
 
-    container.appendChild(newContent)
+    container.appendChild(newContent);
 
-
-    
-</script>
-
+    const button = document.getElementsByClassName("create-btn");
+    for (let k = 0; k < button.length; k++) {
+      button[k].addEventListener("click", function () {
+        window.location.href = "./Newinvoice.html";
+      });
+    }
+  </script>
 </html>
