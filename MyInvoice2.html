@@ -25,7 +25,7 @@
         </h1>
         <nav class="gap-3 flex flex-row">
           <button class="hidden font-semibold text-xl lg:flex">Login</button>
-          <a href="" class="text-Accent font-semibold lg:text-xl"
+          <a href="" class="startnow text-Accent font-semibold lg:text-xl"
             >Start Now, It's Free</a
           >
         </nav>
@@ -50,7 +50,7 @@
             and generate professional invoices in minutes.
           </p>
           <button
-            class="font-satoshi text-[16px] bg-Accent text-white w-[100%] h-12 lg:w-1/2 lg:text-[24px]"
+            class="startnow font-satoshi text-[16px] bg-Accent text-white w-[100%] h-12 lg:w-1/2 lg:text-[24px]"
           >
             Start Now, It's Free
           </button>
@@ -465,4 +465,13 @@
       </footer>
     </main>
   </body>
+  <script>
+    const startNow = document.getElementsByClassName("startnow");
+    for (let k = 0; k < startNow.length; k++){
+      startNow[k].addEventListener("click",function(){
+        window.location.href = "Newinvoice.html";
+        console.log("am good")
+      })
+    }
+  </script>
 </html>
