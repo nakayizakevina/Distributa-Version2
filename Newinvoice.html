@@ -28,9 +28,9 @@
       </div>
       <div class="p-5 cursor-pointer  hover:bg-Grey  rounded-md">
         <a href="./index.html">
-          <p>Log Out</p>
+          <p class="font-satoshi">Log Out</p>
         </a>
-        <p>Settings</p>
+        <p class="font-satoshi">Settings</p>
       </div>
 
     </div>
@@ -107,7 +107,7 @@
         </div>
       </div>
     </aside>
-    <section class="w-full h-full flex flex-1 flex-col gap-4 lg:w-80% lg:gap-10">
+    <section class="w-full h-full flex flex-1 flex-col gap-4 lg:w-80% lg:gap-10 lg:overflow-y-auto">
       <h1 class="font-semibold text-3xl ">New Invoice</h1>
       <div class="w-full bg-Grey gap-7 rounded-sm lg:flex lg:flex-col lg:p-4 lg:relative lg:h-28">
         <div class="flex flex-row gap-4 p-4 lg:p-0">
@@ -125,7 +125,7 @@
             <div class="flex flex-col gap-3  w-full lg:flex-row lg:w-auto">
               <div class="flex flex-col gap-1">
                 <label for="">Paper Size</label>
-                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                <select name="" id="" class="border border-Grey2 h-12 focus:border-Accent hover:border-Black lg:w-48">
                   <option value="">Select one</option>
                   <option value="">A2</option>
                   <option value="">A3</option>
@@ -134,7 +134,7 @@
               </div>
               <div class="flex flex-col gap-1">
                 <label for="">Orientation</label>
-                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                <select name="" id="" class="border border-Grey2 h-12 focus:border-Accent hover:border-Black lg:w-48">
                   <option value="">Select one</option>
                   <option value="">Portrait</option>
                   <option value="">Landscape</option>
@@ -143,7 +143,7 @@
               </div>
               <div class="flex flex-col gap-1">
                 <label for="">Currency</label>
-                <select name="" id="" class="border border-Grey2 h-12 lg:w-48">
+                <select name="" id="" class="border border-Grey2 h-12 focus:border-Accent hover:border-Black lg:w-48">
                   <option value="">Select one</option>
                   <option value="">A1</option>
                   <option value="">A2</option>
@@ -154,7 +154,7 @@
 
             </div>
 
-            <button class="hidden lg:flex bg-Grey2 items-center text-white p-4 h-12 my-5">Download PDF</button>
+            <button class="hidden lg:flex bg-Grey2 items-center text-white p-4 h-12 my-5 hover:bg-Black hover:text-White focus:border-2 focus:border-Black focus:bg-Accent">Download PDF</button>
 
           </section>
 
@@ -163,7 +163,7 @@
 
 
       </div>
-      <section class="md:flex md:flex-row md:gap-3 lg:overflow-y-auto">
+      <section class="md:flex md:flex-row md:gap-3">
 
         <div class="flex flex-col gap-3 md:gap-8">
           <section class="w-full">
@@ -172,45 +172,45 @@
                 <strong>Billed From</strong>
                 <div class="w-full flex gap-2 ">
                   <input type="text" placeholder="Name"
-                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                   <input type="text" placeholder="Email"
-                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                 </div>
 
-                <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
-
+                <textarea name="" id="" class="h-24 resize-none border border-Grey2 pl-2 focus:border-Accent hover:border-Black"></textarea>
+                
               </form>
 
               <form action="" class="flex flex-col gap-2 p-4 lg:w-1/2">
                 <strong>Billed To</strong>
                 <div class="w-full flex gap-2">
                   <input type="text" placeholder="Name"
-                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                   <input type="text" placeholder="Email"
-                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight">
+                    class="w-1/2 h-12 border border-Grey2 pl-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                 </div>
-                <textarea name="" id="" class="h-24 border border-Grey2 pl-2"></textarea>
+                <textarea name="" id="" class="h-24 resize-none border border-Grey2 pl-2 focus:border-Accent hover:border-Black"></textarea>
 
               </form>
             </div>
           </section>
-          <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4 md:hidden">
+          <section class=" bg-Grey rounded-sm flex flex-col gap-2 p-4 md:hidden">
             <label for="">Title</label>
-            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black lg:w-48">
             <label for="">Invoice #</label>
-            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black lg:w-48">
             <label for="">Issue Date</label>
-            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48 focus:border-Accent hover:border-Black">
             <label for="">Due Date</label>
-            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48 focus:border-Accent hover:border-Black">
           </section>
 
           <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
             <div class="overflow-x-auto flex flex-col gap-2">
               <table class="w-full">
                 <thead>
-                  <tr>
-                    <th class="px-10 py-2 text-left">Title</th>
+                  <tr class="border-b-2">
+                    <th  class="px-44 py-2 text-left">Title</th>
                     <th class="px-10 py-2 text-left">Quantity</th>
                     <th class="px-10 py-2 text-left">Units</th>
                     <th class="px-10 py-2 text-left">Price/Unit</th>
@@ -218,69 +218,31 @@
                     <th class="px-10 py-2"></th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr class="border-t">
-                    <td class="px-10 py-2">Macbooks</td>
-                    <td class="px-10 py-2">5</td>
-                    <td class="px-10 py-2">LBs</td>
-                    <td class="px-10 py-2">$500</td>
-                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                  </tr>
-                  <tr class="">
-                    <td class="px-10 py-2">Macbooks</td>
-                    <td class="px-10 py-2">5</td>
-                    <td class="px-10 py-2">LBs</td>
-                    <td class="px-10 py-2">$500</td>
-                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                  </tr>
-                  <tr class="">
-                    <td class="px-10 py-2">Macbooks</td>
-                    <td class="px-10 py-2">5</td>
-                    <td class="px-10 py-2">LBs</td>
-                    <td class="px-10 py-2">$500</td>
-                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                  </tr>
-                  <tr class="">
-                    <td class="px-10 py-2">Macbooks</td>
-                    <td class="px-10 py-2">5</td>
-                    <td class="px-10 py-2">LBs</td>
-                    <td class="px-10 py-2">$500</td>
-                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                  </tr>
-                  <tr class="">
-                    <td class="px-10 py-2">Macbooks</td>
-                    <td class="px-10 py-2">5</td>
-                    <td class="px-10 py-2">LBs</td>
-                    <td class="px-10 py-2">$500</td>
-                    <td class="px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
-                    <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
-                  </tr>
+                <tbody id="table-body">
+                 
 
-                </tbody>
+                </tbody> 
               </table>
-              <div class="w-full flex gap-3">
+              <div id="addRow" class="w-full flex gap-3">
                 <div class="flex flex-row gap-2">
-                  <input type="text" name="" id="" placeholder="Title"
-                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                  <input type="text" name="" id="title" placeholder="Title"
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight focus:border-Accent hover:border-Black"/>
                   <input type="text" name="" id="" placeholder="Quantity"
-                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                   <input type="text" name="" id="" placeholder="Unites"
-                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
                   <input type="text" name="" id="" placeholder="Price"
-                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight">
+                    class="border border-Grey2 pl-2 py-2 placeholder-black font-extralight focus:border-Accent hover:border-Black">
+                    
                 </div>
 
                 <div>
-                  <button class="text-blue-600 font-semibold py-2 cursor-pointer">Save</button>
+                  <button id="save" class="text-blue-600 font-semibold py-2 px-4 cursor-pointer hover:bg-Black hover:text-White focus:border-2 focus:border-Black focus:bg-Accent">Save</button>
                 </div>
 
               </div>
 
-              <button class="bg-Accent text-white p-2 w-24">Add Item</button>
+              <button  id="addItem" class="bg-Accent text-white p-2 w-24 hover:bg-Black hover:text-White focus:border-2 focus:border-Black focus:bg-Accent hidden">Add Item</button>
             </div>
           </section>
 
@@ -291,12 +253,12 @@
             </div>
             <label for="">Discount</label>
             <input type="text" placeholder="Discount"
-              class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+              class="w-full h-12 border border-Grey2 pl-2 placeholder-black focus:border-Accent hover:border-Black lg:w-48 ">
             <label for="">Tax</label>
-            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black focus:border-Accent hover:border-Black lg:w-48">
             <label for="">Shipping</label>
             <input type="text" placeholder="Shipping"
-              class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
+              class="w-full h-12 border border-Grey2 placeholder-black focus:border-Accent hover:border-Black pl-2 lg:w-48">
             <div class="flex flex-row justify-between border-t-2">
               <p>Amount due</p>
               <strong>$2500</strong>
@@ -307,17 +269,17 @@
             <div class="w-full flex flex-col ">
               <label for="">Notes</label>
               <textarea name="" id="" placeholder="Notes"
-                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
+                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight resize-none focus:border-Accent hover:border-Black md:w-full"></textarea>
             </div>
 
             <div class="w-full flex flex-col">
               <label for="">Terms & Conditions</label>
               <textarea name="" id="" placeholder="Terms & Conditions"
-                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight md:w-full"></textarea>
+                class="h-24 border border-Grey2 pl-3 pt-3 placeholder-black font-extralight resize-none focus:border-Accent hover:border-Black md:w-full"></textarea>
             </div>
           </section>
 
-          <button class="bg-Grey2 text-white py-3 md:hidden">Download PDF</button>
+          <button class="bg-Grey2 text-white py-3 hover:bg-Black hover:text-White focus:border-2 focus:border-Black focus:bg-Accent  md:hidden">Download PDF</button>
 
 
         </div>
@@ -325,13 +287,13 @@
         <aside class="hidden md:flex md:flex-col md:gap-3 md:w-1/2">
           <section class="bg-Grey rounded-sm flex flex-col gap-2 p-4">
             <label for="">Title</label>
-            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="text" placeholder="Title" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black">
             <label for="">Invoice #</label>
-            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="text" placeholder="00001" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black">
             <label for="">Issue Date</label>
-            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black">
             <label for="">Due Date</label>
-            <input type="date" class="w-full h-12 border border-Grey2 pl-2 lg:w-48">
+            <input type="date" class="w-full h-12 border border-Grey2 pl-2 focus:border-Accent hover:border-Black">
           </section>
 
           <section class="bg-Grey rounded-sm flex flex-col gap-4 p-4">
@@ -341,12 +303,12 @@
             </div>
             <label for="">Discount</label>
             <input type="text" placeholder="Discount"
-              class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+              class="w-full h-12 border border-Grey2 pl-2 placeholder-black focus:border-Accent hover:border-Black">
             <label for="">Tax</label>
-            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black lg:w-48">
+            <input type="text" placeholder="Tax" class="w-full h-12 border border-Grey2 pl-2 placeholder-black focus:border-Accent hover:border-Black">
             <label for="">Shipping</label>
             <input type="text" placeholder="Shipping"
-              class="w-full h-12 border border-Grey2 placeholder-black pl-2 lg:w-48">
+              class="w-full h-12 border border-Grey2 placeholder-black pl-2 focus:border-Accent hover:border-Black">
             <div class="flex flex-row justify-between border-t-2">
               <p>Amount due</p>
               <strong>$2500</strong>
@@ -399,8 +361,73 @@
   DB.addEventListener("click", function () {
     Colasp.classList.add("hidden");
     Aside.classList.remove("hidden");
-    console.log("am fine");
+    
   });
+  
+  const addItem = document.getElementById("addItem")
+  const addRow = document.getElementById("addRow");
+  let countItems = 0;
+  document.getElementById('save').addEventListener('click', function () {
+    // Get input values and trim whitespace
+    const title = document.getElementById("title")
+    
+    const quantity = document.querySelector('input[placeholder="Quantity"]').value.trim();
+    const units = document.querySelector('input[placeholder="Unites"]').value.trim();
+    const price = document.querySelector('input[placeholder="Price"]').value.trim();
+
+    // Validate inputs (trimmed to avoid whitespace issues)
+    // if (!title || !quantity || !units || !price) {
+    //     alert('Please fill all fields');
+    //     return;
+    // }
+
+    // Create a new row
+    const newRow = document.createElement('tr');
+    // newRow.classList.add('border-t');
+
+    // Add columns to the row
+    newRow.innerHTML = `
+        <td class="px-44 py-2">${title.value}</td>
+        <td class="px-10 py-2">${quantity}</td>
+        <td class="px-10 py-2">${units}</td>
+        <td class="px-10 py-2">${price}</td>
+        <td class="delete px-10 py-2 text-red-600 cursor-pointer underline">Delete</td>
+        <td class="px-10 py-2 text-black cursor-pointer underline">Edit</td>
+    `;
+
+    // Append the new row to the table body
+    document.getElementById('table-body').appendChild(newRow);
+
+    countItems++;
+
+    // Clear input fields
+    document.getElementById("title").value = '';
+    document.querySelector('input[placeholder="Quantity"]').value = '';
+    document.querySelector('input[placeholder="Unites"]').value = '';
+    document.querySelector('input[placeholder="Price"]').value = '';
+
+    // Attach event listener to the delete button for the new row
+    newRow.querySelector('.delete').addEventListener('click', function () {
+        newRow.remove();
+        countItems--
+        if (countItems<=0){
+          addRow.classList.remove("hidden");
+        }
+    });
+   
+    // for ( let K = 0; K<= addRow.length;){
+    //   addRow.classList.add("addRow");
+    // }
+    
+
+    addRow.classList.add("hidden");
+    addItem.classList.remove("hidden");
+});
+
+addItem.addEventListener("click",function(){
+  addRow.classList.remove("hidden");
+})
+
 </script>
 
 </html>
